@@ -1,0 +1,70 @@
+ .title {
+   height: 5vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+ 
+ 
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #8c8c8c;
+}
+
+.navbar a.active {
+  background-color: 	#000000;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+div.contact {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 500px;
+  height: 120px;
+  border: 3px solid #555;
+  padding: 10px;
+}
+
+.fade::after{
+	content:'';
+	background: black;
+	width: 500px;;
+	height: 120px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity: 0.5s ease;
+}
+.fade:hover::after{
+	opacity: 0.5;
+}
+	
+	
+	
+	
