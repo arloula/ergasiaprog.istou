@@ -14,7 +14,7 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="container-fluid">
 		<div class="navbar-header">
-		  <a class="navbar-brand" href="index.php">Return To WebSite</a>
+		  <a class="navbar-brand" href="index.html">Return To WebSite</a>
 		</div>
 		<ul class="nav navbar-nav"> <!-- unlisted items -->
 		  <li class="active"><a href="eshop.php">eShop</a></li><!-- listed items -->
