@@ -85,49 +85,6 @@ text-transform: uppercase;
 }
 
 
-.navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
-}
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-  width: 20%; /* Four links of equal widths */
-  text-align: center;
-}
-.navbar a.active {
-  background-color: 	#000000;
-}
- 
-  .navbar a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
 
-
-.main-nav
-{
-
-	margin:20px;
-	float: left;
-	width:180px;
-}
-.row{
-
-width: auto;
-height: 70%;
-position: fixed;
-top:150px;
-left:150px;
-right:150px;
-background-color: white;
-}
- 	
 
 	
