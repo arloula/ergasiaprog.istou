@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 13 Μάη 2019 στις 18:14:51
+-- Χρόνος δημιουργίας: 15 Μάη 2019 στις 22:12:50
 -- Έκδοση διακομιστή: 10.1.39-MariaDB
 -- Έκδοση PHP: 7.3.5
 
@@ -54,6 +54,28 @@ INSERT INTO `products` (`id`, `name`, `image`, `price`) VALUES
 (12, 'Placebo 2 Disc', 'eshop-img/media1.jpg', 5),
 (13, 'Jesus\' Son 7\" Vinyl', 'eshop-img/media2.jpg', 5);
 
+-- --------------------------------------------------------
+
+--
+-- Δομή πίνακα για τον πίνακα `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `user_first` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `user_last` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Άδειασμα δεδομένων του πίνακα `user`
+--
+
+INSERT INTO `user` (`id`, `user_first`, `user_last`, `username`, `email`, `password`) VALUES
+(6, 'Daniel', 'Nielsen', 'Admin', 'usemmtuts@gmail.com', '$2y$10$1GhavCpDF5T/BmfOAyEKFu8u9RrGAKhSVcTJcCeL2ZNJMQLvtRstm');
+
 --
 -- Ευρετήρια για άχρηστους πίνακες
 --
@@ -65,6 +87,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Ευρετήρια για πίνακα `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT για άχρηστους πίνακες
 --
 
@@ -73,6 +101,12 @@ ALTER TABLE `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT για πίνακα `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

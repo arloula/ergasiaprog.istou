@@ -1,0 +1,307 @@
+/* Code starts at line 106*/
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*MY CODE*/
+
+.main-wrapper {
+	margin: 0 auto;
+	width:100%;	
+}
+.main-wrapperin {	
+	position:relative;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	height:600px;
+	background-image: url(large-blured.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 900px;
+	background-position: top center;
+	background-attachment: fixed;
+
+}
+
+a {
+	text-decoration:none;
+}
+
+body {
+	background-color: white;
+	
+}
+
+header nav {
+	width: 100%;
+	height: 63px;
+	background-color: #262626;
+
+}
+
+header nav ul {    /*need this*/
+	float: left;
+	background-color: #000000;
+
+	
+}
+
+header nav ul li {    /*need this*/
+	float: left;
+	list-style: none;
+}
+
+header nav ul li a {    /*need this*/
+	font-family: arial;
+	font-size: 18px;
+	color: #b3b3b3;
+	line-height: 63px;
+	margin: auto 10px;
+	
+}
+
+header .nav-login {
+	float: right;
+}
+
+header .nav-login form{
+	float: left;
+	padding-top: 15px;
+}
+
+header .nav-login form input{
+	float: left;
+	width: 140px;
+	height: 30px;
+	padding: 0px 10px;
+	margin-right: 10px;
+	border: none;
+	background-color: white;
+	font-family: arial;
+	font-size: 14px;
+	color: #111;
+	line-height: 30px;
+
+}
+
+header .nav-login form button{
+	float: left;
+	width: 60px;
+	height: 30px;
+	margin-left:0px;
+	margin-right:10px;
+	border: none;
+	border-radius: 2px;
+	background-color: black;
+	font-family: arial;
+	font-size: 14px;
+	color: white;
+	cursor: pointer;
+
+}
+
+header .nav-login form button:hover {
+	background-color: #ccc;
+}
+
+header .nav-login a {    /*need this*/
+	display: block;
+	width: 60px;
+	height: 60px;
+	border: none;
+	float: left;
+	background-color: #262626;
+	font-family: arial;
+	font-size: 16px;
+	color: white;
+	line-height: 63px;
+	cursor: pointer;
+}
+
+.main-container{
+	padding-top: 0px;
+}
+
+
+.main-container h2{
+	line-height: 50px;
+	font-family: arial;
+	font-size: 40px;
+	color: 	 #f9f9eb;
+	text-align: center;
+	margin-bottom:10px;
+}
+
+/*signup.php*/
+
+.signup-form {
+	width: 400px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
+.signup-form input{
+	width: 90%;
+	height: 40px;
+	padding: 0px 5%;
+	margin-bottom: 4px;
+	border: none;
+	background-color: #fff;
+	font-family: arial;
+	font-size: 16px;
+	color: #111;
+	line-height: 40px;
+
+}
+
+.signup-form button{
+	display: block;
+	margin: 0 auto;
+	
+	width: 30%;
+	height: 40px;
+	border: none;
+	background-color: #222;
+	border-radius: 2px;
+	font-family: arial;
+	font-size: 16px;
+	color: white;
+	cursor: pointer;
+}
+
+.signup-form button: hover{	
+	background-color: #111;
+}
+
+#headerWrapper{
+	position:relative;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+	height:600px;
+	background-image: url(large-blured.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 900px;
+	background-position: top center;
+	background-attachment: fixed;
+	
+}
+
+#logotext{
+	position: absolute;
+	width: 100%;
+	height:180px;
+	background-image: url(placebo-logo.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 50% 180px;
+	top: 50%;
+	margin-top:-90px;
+}
+
+
+
+
+
+
+

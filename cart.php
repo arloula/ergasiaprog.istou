@@ -1,5 +1,6 @@
 <?php
-	session_start();
+	
+	
 	$product_ids = array();
 	//session_destroy(); //make sure the session is empty
 	
@@ -11,12 +12,12 @@
 			$count = count($_SESSION['shopping_cart']);
 			
 			//create sequantial array for matching array keys to products id's
-			$product_ids = array_column($_SESSION['shopping_cart'],'id');
+			$product_ids = array_column($_SESSION['shopping_cart'],'ids');
 			
-			if (!in_array(filter_input(INPUT_GET, 'id'), $product_ids)){
+			if (!in_array(filter_input(INPUT_GET, 'ids'), $product_ids)){
 			$_SESSION['shopping_cart'][$count] = array
 				(
-					'id' => filter_input(INPUT_GET, 'id'),
+					'ids' => filter_input(INPUT_GET, 'ids'),
 					'name' => filter_input(INPUT_POST, 'name'),
 					'price' => filter_input(INPUT_POST, 'price'),
 					'quantity' => filter_input(INPUT_POST, 'quantity')
@@ -25,7 +26,7 @@
 			else {   //if the product already exists change the quantity to +1
 				//match array key to id of the product being added to the cart
 				for($i = 0; $i < count($product_ids); $i++){
-					if($product_ids[$i] == filter_input(INPUT_GET, 'id')){
+					if($product_ids[$i] == filter_input(INPUT_GET, 'ids')){
 						//add item quantity to the exixting product in the array
 						$_SESSION['shopping_cart'][$i]['quantity'] += filter_input(INPUT_POST, 'quantity');
 					}
@@ -37,7 +38,7 @@
 			//create array using submitted form data,start from key 0 and fill it with values
 			$_SESSION['shopping_cart'][0] = array
 			(
-				'id' => filter_input(INPUT_GET, 'id'),
+				'ids' => filter_input(INPUT_GET, 'ids'),
 				'name' => filter_input(INPUT_POST, 'name'),
 				'price' => filter_input(INPUT_POST, 'price'),
 				'quantity' => filter_input(INPUT_POST, 'quantity')
@@ -48,7 +49,7 @@
 	if(filter_input(INPUT_GET, 'action') == 'delete') { //if the remove button has been clicked
 		//loop through all products in the shopping cart until is matches with GET id variable
 		foreach($_SESSION['shopping_cart'] as $key => $product){
-			if ($product['id'] == filter_input(INPUT_GET, 'id')){
+			if ($product['ids'] == filter_input(INPUT_GET, 'ids')){
 				//remove product from the shoppng cart when it matches with the GET id
 				unset($_SESSION['shopping_cart'][$key]);
 			}
@@ -81,18 +82,21 @@
 	</head>
 
 	<body>
-	
+		
+		
 		<!-- Top Nav Bar -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
-		  <div class="container-fluid">
-			<div class="navbar-header">
-			  <a class="navbar-brand" href="index.html">Return To WebSite</a>
+			<div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="index.html">Return To WebSite</a>
+				</div>
+				
+				<ul class="nav navbar-nav">
+				  <li class="active"><a href="cart.php">Placebo's eShop</a></li><!-- listed items -->
+				 
+				</ul>
+				
 			</div>
-			<ul class="nav navbar-nav"> <!-- unlisted items -->
-			  <li class="active"><a href="cart.php">Placebo's eShop</a></li><!-- listed items -->
-			 
-			</ul>
-		  </div>
 		</nav>
 
 		<!-- Header -->
@@ -107,7 +111,7 @@
 			<?php
 				/*sindesi me tin basi*/
 				$connect = mysqli_connect('localhost','manager','6958731997A.m','cart');
-				$query = 'SELECT * FROM products ORDER by id ASC';
+				$query = 'SELECT * FROM products ORDER by ids ASC';
 				$result = mysqli_query($connect,$query);
 				
 
@@ -118,7 +122,7 @@
 						?>
 							
 							<div class="col-sm-4 col-md-3">
-								<form method="post" action="cart.php?action=add&id=<?php echo $product['id']; ?>">
+								<form method="post" action="loginindex.php?action=add&ids=<?php echo $product['ids']; ?>">
 									<div class="products">
 										<img src=" <?php echo $product['image']; ?>"  class="img-thumb" />
 										<h4 class="text-dark"><?php echo $product['name']; ?></h4>
@@ -129,6 +133,7 @@
 										<input type="submit" name="add_to_cart" style = "margin-top:5px;" class="btn btn-dark" 
 												value="Add to card" />
 									</div>
+									
 								</form>
 							</div>
 						
@@ -166,7 +171,7 @@
 				<td>$<?php echo $product['price']; ?></td>
 				<td>$<?php echo number_format($product['quantity'] * $product['price'], 2); ?></td>
 				<td>
-					<a href="cart.php?action=delete&id=<?php echo $product['id']; ?>">
+					<a href="loginindex.php?action=delete&ids=<?php echo $product['ids']; ?>">
 						<div class="btn-danger">Remove</div>
 					</a>
 				</td>
@@ -203,6 +208,7 @@
 			</div>
 			
 		</div>
+		
 		
 	</body>
 
