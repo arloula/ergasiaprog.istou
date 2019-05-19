@@ -85,23 +85,22 @@ text-transform: uppercase;
 }
 
 
-.welcome{
-	position: absolute;
-	width: 1200px;
-	margin-left: 0px;
-	
-
-}
-h1
+.welcome 
 {
+	position: absolute;
+	width: 1000p;
+	margin-left: 300px;
+	margin-top: 500px;
 	color: white;
 	text-transform: uppercase;
-	font-size: 70px;
-	text-align: center;
-	margin-top: 275px;
+	font-size: 80px;
+	text-align:center;
+	margin-top: 200x;
+
 	
-	}
-	
+
+
+
 
 p {
   text-align: center;
