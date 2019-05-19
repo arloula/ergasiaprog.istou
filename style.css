@@ -58,8 +58,8 @@ header
 .periexomeno
 {
 width: auto;
-height: 70%;
-position: fixed;
+height: auto;
+position: absolute;
 top:150px;
 left:150px;
 right:150px;
@@ -90,7 +90,6 @@ text-transform: uppercase;
 }
 
 
-<<<<<<< HEAD
 .welcome{
 	position: absolute;
 	width: 1200px;
@@ -119,7 +118,6 @@ text-transform: uppercase;
   visibility: visible;
 }
 
-=======
 .welcome 
 {
 	position: absolute;
@@ -132,21 +130,44 @@ text-transform: uppercase;
 	text-align:center;
 	margin-top: 200x;
 
-	
->>>>>>> 90b8008ccbf2e5ecf879af7854782c9c28420f6f
+}
 
+.tourinfo {
+	padding-top:50px;
+	padding-bottom:50px;
+	padding-left : 20%;
+	padding-right: 20%;
+}
 
+.tourinfo h2{
+	text-decoration: underline;
+	text-align: center;
+	color: black;
+}
 
+.tourinfo p{
+	text-decoration: none;
+	color: black;
+}
 
-p {
-  text-align: center;
-  color: black;
+body{ 
+background-color:black;
+}
+
+.aboutus{
+	padding-top:25px;
+	padding-bottom:25px;
+	padding-left : 15%;
+	padding-right: 15%;
+}
+
+.albums {
+	padding-top:25px;
+	padding-bottom:25px;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 	
-h2 {
-  text-align: center;
-  color: black;
-}
 
 
 
