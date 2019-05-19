@@ -90,6 +90,7 @@ text-transform: uppercase;
 }
 
 
+<<<<<<< HEAD
 .welcome{
 	position: absolute;
 	width: 1200px;
@@ -117,6 +118,24 @@ text-transform: uppercase;
 .details:hover .textdetails {
   visibility: visible;
 }
+
+=======
+.welcome 
+{
+	position: absolute;
+	width: 1000p;
+	margin-left: 300px;
+	margin-top: 500px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 80px;
+	text-align:center;
+	margin-top: 200x;
+
+	
+>>>>>>> 90b8008ccbf2e5ecf879af7854782c9c28420f6f
+
+
 
 
 p {
